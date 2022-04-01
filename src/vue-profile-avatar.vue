@@ -21,7 +21,7 @@ export default defineComponent({
         i: '#99FF99', j: '#B34D4D',
         k: '#80B300', l: '#809900', 
         m: '#E6B3B3', n: '#6680B3', 
-        o: '#66991A', p: '#FF99E6', 
+        o: '#6666FF', p: '#FF99E6', 
         q: '#CCFF1A', r: '#FF1A66', 
         s: '#E6331A', t: '#33FFCC', 
         u: '#66994D', v: '#B366CC', 
@@ -33,6 +33,27 @@ export default defineComponent({
         7: '#CCCC00', 8: '#66E64D', 
         9: '#4D80CC', 0: '#9900B3', 
         else: '#6666FF'
+      },
+      pastelBackgroundColors: {
+        a: '#FCFFA6', b: '#C1FFD7', 
+        c: '#B5DEFF', d: '#CAB8FF', 
+        e: '#F38BA0', f: '#EDF6E5',
+        g: '#FFBCBC', h: '#B5EAEA',
+        i: '#FFFDDE', j: '#D9D7F1',
+        k: '#E7FBBE', l: '#FFCBCB', 
+        m: '#FCFFA6', n: '#C1FFD7', 
+        o: '#B5DEFF', p: '#CAB8FF', 
+        q: '#F38BA0', r: '#EDF6E5', 
+        s: '#FFBCBC', t: '#B5EAEA', 
+        u: '#FFFDDE', v: '#D9D7F1', 
+        w: '#E7FBBE', x: '#FFCBCB', 
+        y: '#FCFFA6', z: '#C1FFD7',
+        ñ: '#B5DEFF', 1: '#CAB8FF',
+        2: '#F38BA0', 3: '#EDF6E5',
+        4: '#FFBCBC', 5: '#B5EAEA', 
+        6: '#FFFDDE', 7: '#D9D7F1',
+        8: '#E7FBBE', 9: '#FFCBCB',
+        0: '#B5DEFF', else: '#CAB8FF'
       }
     };
   },
@@ -72,7 +93,7 @@ export default defineComponent({
     getColorByInitial(initial) {
       if (this.bgColor) return this.bgColor
 
-      return this.arrBackgroundColors[initial.toLowerCase()]
+      return this.pastelBackgroundColors[initial.toLowerCase()]
     },
     getBorderColor(color, percent) {
       if (this.borderColorPropExists()) return this.borderColor
