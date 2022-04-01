@@ -11,8 +11,8 @@ export default defineComponent({
   data() {
     return {
        arrBackgroundColors: {
-        a: '#FF6633' ,
-        b: '#FFB399' , 
+        a: '#FF6633',
+        b: '#FFB399', 
         c: '#FF33FF', 
         d: '#FFFF99', 
         e: '#00B3E6', 
@@ -36,16 +36,7 @@ export default defineComponent({
         w: '#4D8000', 
         x: '#B33300', 
         y: '#CC80CC', 
-        z: '#66664D',
-        '_': '#991AFF',
-        '@': '#E666FF',
-        '!': '#4DB3FF', 
-        '#': '#1AB399', 
-        '-': '#E666B3', 
-        '/': '#33991A', 
-        '=': '#CC9999', 
-        '-': '#B3B31A', 
-        '+': '#00E680', 
+        z: '#66664D', 
         1: '#4D8066', 
         2: '#809980', 
         3: '#E6FF80', 
@@ -95,13 +86,41 @@ export default defineComponent({
     },
     getColorByInitial(initial) {
       return this.arrBackgroundColors[initial.toLowerCase()]
+    },
+    shadeColor(color, percent) {
+
+      var R = parseInt(color.substring(1,3),16);
+      var G = parseInt(color.substring(3,5),16);
+      var B = parseInt(color.substring(5,7),16);
+
+      R = parseInt(R * (100 + percent) / 100);
+      G = parseInt(G * (100 + percent) / 100);
+      B = parseInt(B * (100 + percent) / 100);
+
+      R = (R<255)?R:255;  
+      G = (G<255)?G:255;  
+      B = (B<255)?B:255;  
+
+      var RR = ((R.toString(16).length==1)?"0"+R.toString(16):R.toString(16));
+      var GG = ((G.toString(16).length==1)?"0"+G.toString(16):G.toString(16));
+      var BB = ((B.toString(16).length==1)?"0"+B.toString(16):B.toString(16));
+
+      return "#"+RR+GG+BB;
     }
   },
 });
 </script>
 
 <template>
-  <div class="avatarContainer" :class="[avatarClass, isBorder]" :style="{backgroundColor: backgroundColor}">
+  <div 
+    class="avatarContainer" 
+    :class="[avatarClass, isBorder]" 
+    :style="{ 
+      backgroundColor: backgroundColor, 
+      color: shadeColor(backgroundColor, -45), 
+      borderColor:  shadeColor(backgroundColor, -45)  
+      }"
+    >
     <span class="text"> {{initials}} </span>
   </div>
 </template>
@@ -112,7 +131,7 @@ export default defineComponent({
   .avatarContainer {
     display: flex;
     border-radius: 100%;
-    background-color: #FF6633;
+    background-color: #6666FF;
   }
 
   .small {
