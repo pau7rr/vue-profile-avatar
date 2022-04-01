@@ -1,3 +1,3 @@
-<h2 align="center"> Minimal avatar component for Vue 3 <h2>
+<h2 align="center"> Minimalist avatar component for Vue 3 <h2>
 
 Work in progress...
