@@ -12,6 +12,6 @@ export default defineComponent({
 
 <template>
   <div id="app">
-    <profile-avatar username="pau7rr" />
+    <profile-avatar username="pau rosquellas" />
   </div>
 </template>
