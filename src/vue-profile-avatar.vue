@@ -144,13 +144,13 @@ export default defineComponent({
   }
   
   .medium {
-    height: 75px;
-    width: 75px;
+    height: 60px;
+    width: 60px;
   }
   
   .large {
-    height: 100px;
-    width: 100px;
+    height: 75px;
+    width: 75px;
   }
 
   .text {
