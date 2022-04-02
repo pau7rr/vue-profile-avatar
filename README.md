@@ -86,4 +86,4 @@ Then:
     <profile-avatar username="Alexis Wolf" size="m" />
     <profile-avatar username="Paul Daniels" size="l" />
 ```
-![Sizes](/images/sizes.png?raw=true)
+![Sizes](/images/sizes.png?raw=true=x250)
