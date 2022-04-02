@@ -14,7 +14,7 @@ export default defineComponent({
   },
   data() {
     return {
-       normalBackgroundColors: {
+      normalBackgroundColors: {
         a: '#FF6633', b: '#FFB399', 
         c: '#809900', d: '#FFFF99', 
         e: '#00B3E6', f: '#E6B333',
@@ -200,6 +200,7 @@ export default defineComponent({
   .large {
     height: 75px;
     width: 75px;
+    font-size: 20px;
   }
 
   .text {

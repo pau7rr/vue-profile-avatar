@@ -76,3 +76,14 @@ Then:
 - Description: Type of palette colors for your avatars. Can be `normal`, `pastel`, or `brownie`.
 - Default: `normal`
 - Required: false
+
+## Examples
+
+### Sizes
+
+```html
+    <profile-avatar username="Thomas Bush" size="s" />
+    <profile-avatar username="Alexis Wolf" size="m" />
+    <profile-avatar username="Paul Daniels" size="l" />
+```
+![Sizes](/images/sizes.png?raw=true)
