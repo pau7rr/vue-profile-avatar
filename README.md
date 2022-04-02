@@ -20,7 +20,7 @@ An minimalist avatar component for Vue 3.
 ### ES6
 ```js
 
-import Avatar from 'vue-profile-avatar'
+import ProfileAvatar from 'vue-profile-avatar'
 
 export default {
   ...
