@@ -1,4 +1,4 @@
-#vue-profile-avatar
+# vue-profile-avatar
 
 ![Banner](/images/banner.png?raw=true)
 

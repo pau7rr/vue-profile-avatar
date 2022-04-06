@@ -1,6 +1,6 @@
 {
   "name": "vue-profile-avatar",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Minimalist avatar component for Vue 3",
   "author": "Pau Rosquellas <pau.rosquellas@gmail.com>",
   "license": "MIT",
@@ -11,6 +11,12 @@
     "url": "https://github.com/pau7rr/vue-profile-avatar"
   },
 
+  "keywords": [
+    "avatar",
+    "profile",
+    "vue3",
+    "minimal"
+  ],
   "main": "dist/vue-profile-avatar.ssr.js",
   "browser": "dist/vue-profile-avatar.esm.js",
   "module": "dist/vue-profile-avatar.esm.js",
