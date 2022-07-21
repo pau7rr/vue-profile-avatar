@@ -7,6 +7,10 @@ An minimalist avatar component for Vue 3.
 - Colors decided by initial of username.
 - You can customize all colors.
 
+### New Update with Custom Images!
+
+![Images](/images/images.png?raw=true)
+
 ## Installation
 
 `npm install vue-profile-avatar`
