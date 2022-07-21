@@ -4,13 +4,14 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'ProfileAvatar', 
   props: {
-    username: { type: String, required: true },
+    username: { type: String, default: 'Username', required: true },
     size: { type: String, default: 's', required: false },
     border: { type: Boolean, default: true, required: false },
     bgColor: { type: String, required: false },
     borderColor: { type: String, required: false },
     textColor: { type: String, required: false },
-    colorType: { type: String, required: false, default: 'normal' }
+    colorType: { type: String, required: false, default: 'normal' },
+    image: { type: String, required: false },
   },
   data() {
     return {
@@ -174,7 +175,8 @@ export default defineComponent({
       borderColor: getBorderColor(backgroundColor, -45),
     }"
   >
-    <span class="text"> {{initials}} </span>
+    <span v-if="!image" class="text"> {{initials}} </span>
+    <img v-if="image" :src="image" class="image" alt="Avatar"/>
   </div>
 </template>
 
@@ -185,6 +187,7 @@ export default defineComponent({
     display: flex;
     border-radius: 100%;
     background-color: #6666FF;
+    overflow: hidden;
   }
 
   .small {
@@ -211,4 +214,6 @@ export default defineComponent({
   .border {
     border: 2px solid black;
   }
+
+  
 </style>
