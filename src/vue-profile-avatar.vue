@@ -125,6 +125,8 @@ export default defineComponent({
       return this.normalBackgroundColors[initial.toLowerCase()]
     },
     getBorderColor(color, percent) {
+      if (this.image) return 'black'
+
       if (this.borderColorPropExists()) return this.borderColor
 
       return this.shadeColor(color, percent)
@@ -213,6 +215,11 @@ export default defineComponent({
 
   .border {
     border: 2px solid black;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
   }
 
   
