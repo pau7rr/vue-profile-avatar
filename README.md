@@ -76,9 +76,14 @@ Then:
 - Required: false
 
 ##### `colorType`
-- Type: Stirng
+- Type: String
 - Description: Type of palette colors for your avatars. Can be `normal`, `pastel`, or `brownie`.
 - Default: `normal`
+- Required: false
+
+##### `image`
+- Type: String
+- Description: Url of image.
 - Required: false
 
 ## Examples
