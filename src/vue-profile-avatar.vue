@@ -6,6 +6,7 @@ export default defineComponent({
   props: {
     username: { type: String, default: 'Username', required: true },
     size: { type: String, default: 's', required: false },
+    customSize: { type: String, required: false },
     border: { type: Boolean, default: true, required: false },
     bgColor: { type: String, required: false },
     borderColor: { type: String, required: false },
@@ -172,6 +173,8 @@ export default defineComponent({
     class="avatarContainer" 
     :class="[avatarClass, isBorder]" 
     :style="{ 
+      height: customSize,
+      width: customSize,
       backgroundColor: backgroundColor, 
       color: getTextColor(backgroundColor, -45), 
       borderColor: getBorderColor(backgroundColor, -45),
