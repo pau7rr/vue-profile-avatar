@@ -53,6 +53,10 @@ Then:
 - Description: Size of the avatar. Can be `s`, `m`, or `l`.
 - Default: `s`
 - Required: false
+##### `customSize`
+- Type: String
+- Description: Custom size of the avatar. Example: `150px`.
+- Required: false
 
 ##### `border`
 - Type: Boolean
