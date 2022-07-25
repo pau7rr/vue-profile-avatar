@@ -1,6 +1,6 @@
 {
   "name": "vue-profile-avatar",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Minimalist avatar component for Vue 3",
   "author": "Pau Rosquellas <pau.rosquellas@gmail.com>",
   "license": "MIT",
